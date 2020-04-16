@@ -1,0 +1,20 @@
+{
+  "name": "js-professional",
+  "version": "1.0.0",
+  "description": "JavaScript Media Player ",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "keywords": [
+    "JavaScript",
+    "JS",
+    "ECMAScript",
+    "ES6"
+  ],
+  "author": "José Cuevas",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
