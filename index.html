@@ -12,15 +12,28 @@
     </header>
 
     <main class="container">
-      <video class="movie">
+      <video id="video" class="movie">
         <source src="./assets/BigBuckBunny.mp4" />
       </video>
 
-      <button>Play/Pause</button>
+      <button id="button">Play/Pause</button>
     </main>
 
     <script>
+      const $video = document.querySelector('#video')
+      const $button = document.querySelector('#button')
 
+      function MediaPlayer (config = {}) {
+        this.media = config.element
+      }
+      
+      MediaPlayer.prototype.play = function () {
+        this.media.paused ? this.media.play() : this.media.pause()
+      }
+      
+      const player = new MediaPlayer({element: $video})
+
+      $button.onclick = () => player.play()
     </script>
   </body>
 </html>
