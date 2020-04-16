@@ -12,6 +12,10 @@ class MediaPlayer {
     this.media.paused ? this.media.play() : this.media.pause()
   }
 
+  muteUnmute () {
+    this.media.muted ? this.unmute() : this.mute()
+  }
+
   mute () {
     this.media.muted = true
   }
