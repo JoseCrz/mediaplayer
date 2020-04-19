@@ -3,15 +3,15 @@ const VERSION = 'v1'
 const precache = async () => {
   const cache = await caches.open(VERSION)
   return cache.addAll([
-    '/',
-    '/index.html',
-    '/assets/index.css',
-    '/assets/BigBuckBunny.mp4',
-    '/assets/js/index.js',
-    '/assets/js/MediaPlayer.js',
-    '/assets/js/plugins/',
-    '/assets/js/plugins/AutoPlay.js',
-    '/assets/js/plugins/AutoPause.js',
+    // '/',
+    // '/index.html',
+    // '/assets/index.css',
+    // '/assets/BigBuckBunny.mp4',
+    // '/assets/js/index.js',
+    // '/assets/js/MediaPlayer.js',
+    // '/assets/js/plugins/',
+    // '/assets/js/plugins/AutoPlay.js',
+    // '/assets/js/plugins/AutoPause.js',
   ])
 }
 
