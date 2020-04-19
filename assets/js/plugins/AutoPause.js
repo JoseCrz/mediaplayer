@@ -28,9 +28,7 @@ class AutoPause {
 
   visibilityHandler () {
     const isVisible = document.visibilityState === 'visible'
-    if (isVisible) {
-      this.player.media.play()
-    } else {
+    if (!isVisible) {
       this.player.media.pause()
     }
   }
