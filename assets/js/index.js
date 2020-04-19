@@ -10,3 +10,7 @@ const player = new MediaPlayer({element: $video, plugins: [new AutoPlay(), new A
 
 $buttonPlay.onclick = () => player.playPause()
 $buttonMute.onclick = () => player.muteUnmute()
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').catch(error => console.log(error))
+}
