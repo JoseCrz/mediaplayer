@@ -69,3 +69,22 @@ function presentation (name: string, lastname: string = 'Smith', age?: number): 
 
 console.log(presentation('José', 'Cuevas', 24))
 console.log(presentation('John'))
+
+// * --- Interfaces ---
+
+interface Rectangle {
+  width: number
+  height: number
+  color?: Color
+}
+
+const myRectangle: Rectangle = {
+  width: 10,
+  height: 5
+}
+
+function rectangleArea (rectangle: Rectangle): number {
+  return rectangle.width * rectangle.height
+}
+
+console.log(rectangleArea(myRectangle))
