@@ -8,7 +8,7 @@ class MediaPlayer {
     const _this = this
     const player = {
       playPause: () => this.playPause(),
-      media: () => this.media,
+      media: this.media,
       get muted() {
         return _this.media.muted
       },
