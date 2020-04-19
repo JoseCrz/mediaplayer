@@ -5,7 +5,19 @@ class MediaPlayer {
     this._initPlugins()
   }
   _initPlugins () {
-    this.plugins.forEach(plugin => plugin.run(this))
+    const _this = this
+    const player = {
+      playPause: () => this.playPause(),
+      media: () => this.media,
+      get muted() {
+        return _this.media.muted
+      },
+      set muted(value) {
+        _this.media.muted = value
+      }
+    }
+
+    this.plugins.forEach(plugin => plugin.run(player))
   }
 
   playPause () {

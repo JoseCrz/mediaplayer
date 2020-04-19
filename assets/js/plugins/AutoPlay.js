@@ -2,7 +2,11 @@ class AutoPlay {
   constructor() {
   }
   run(MediaPlayer) {
-    MediaPlayer.mute()
+    debugger
+    if (!MediaPlayer.muted) {
+      MediaPlayer.muted = true
+    }
+
     MediaPlayer.playPause()
   }
 }
